@@ -1,24 +1,159 @@
 body {
-  background-color: black;
-  color: hsl(150, 50%, 100%);
-  /*font-family: "Lucida Handwriting", cursive;*/
-  font-family: "Brush Script MT", cursive;
-  font-size: 2rem;
+    background-color: black;
+    color: hsl(150, 50%, 100%);
+    /*font-family: "Lucida Handwriting", cursive;*/
+    font-family: "Brush Script MT", cursive;
+    font-size: 2rem;
 }
 
 .top {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  place-items: center;
-  justify-content: center;
-  gap: 5px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    place-items: center;
+    justify-content: center;
+    gap: 5px;
 }
 
 .container {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  place-items: center;
-  justify-content: center;
-  gap: 5px;
-  white-space: pre;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    place-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.text-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    place-items: center;
+    justify-content: center;
+    gap: 5px;
+    white-space: pre;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+    overflow: auto;
+}
+
+:root {
+    --scrub: #C0B3A0;
+    --dayTime: true;
+    --dayDuration: 300s;
+    --moon1_duration: 3s;
+    --moon2_duration: 6s;
+    --moon3_duration: 8s;
+    --moon4_duration: 10s;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+section {
+    margin: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: var(--scrub);
+}
+
+.content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.parallax {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: url("moon_bg.png");
+    background-size: cover;
+    background-position: center; 
+    image-rendering: pixelated;
+}
+
+.parallax .layer {
+    position: absolute;
+    width: 400%;
+}
+
+.parallax .moon1 {
+    height: 26%;                     
+    bottom: 0%;
+    background: url("moon_1.png") repeat-x;
+    background-size: 25% 100%;
+    animation: slideshow var(--moon1_duration) linear infinite;
+}
+
+.parallax .moon2 {
+    height: 39%;                     
+    bottom: 0%;
+    background: url("moon_2.png") repeat-x;
+    background-size: 25% 100%;
+    animation: slideshow var(--moon2_duration) linear infinite;
+}
+
+.parallax .moon3 {
+    height: 49%;                     
+    bottom: 0%;
+    background :url("moon_3.png") repeat-x;
+    background-size: 25% 100%;
+    animation: slideshow var(--moon3_duration) linear infinite;
+}
+
+.parallax .moon4 {
+    height: 63%;                     
+    bottom: 0%;
+    background: url("moon_4.png") repeat-x;
+    background-size: 25% 100%;
+    animation: slideshow var(--moon4_duration) linear infinite;
+}
+
+@keyframes slideshow {
+    0%    { transform: translateX(0%); }
+    100%  { transform: translateX(-50%); }
+}
+
+@keyframes dayToNight {
+    0% { 
+        -webkit-filter: hue-rotate(0deg) brightness(1); 
+        filter: hue-rotate(0deg) brightness(1); 
+    }
+    50% { 
+        -webkit-filter: hue-rotate(180deg) brightness(0.1); 
+        filter: hue-rotate(180deg) brightness(0.1); 
+    }
+    100% { 
+        -webkit-filter: hue-rotate(0deg) brightness(1); 
+        filter: hue-rotate(0deg) brightness(1); 
+    }
+}
+
+.img-url{
+    text-decoration: none;
+}
+
+.url{
+    opacity: 0.5;
+    text-decoration: none;
+}
+
+.url-highlighted{
+    opacity: 1;
+    text-decoration: none;
+}
+
+.url-normal{
+    opacity: 0.5;
+    text-decoration: none;
 }
