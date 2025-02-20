@@ -1,52 +1,20 @@
-body {
-    background-color: black;
-    color: hsl(150, 50%, 100%);
-    /*font-family: "Lucida Handwriting", cursive;*/
-    font-family: "Brush Script MT", cursive;
-    font-size: 2rem;
-}
-
-.top {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    place-items: center;
-    justify-content: center;
-    gap: 5px;
-}
-
-.container {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    place-items: center;
-    justify-content: center;
-    gap: 5px;
-}
-
-.text-container {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    place-items: center;
-    justify-content: center;
-    gap: 5px;
-    white-space: pre;
-}
-
-.main {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 10;
-    overflow: auto;
-}
-
 :root {
-    --scrub: #C0B3A0;
     --dayTime: true;
-    --dayDuration: 300s;
-    --moon1_duration: 3s;
-    --moon2_duration: 6s;
-    --moon3_duration: 8s;
-    --moon4_duration: 10s;
+    --dayDuration: 120s;
+    --moon1_duration: 4s;
+    --moon2_duration: 8s;
+    --moon3_duration: 16s;
+    --moon4_duration: 32s;
+}
+
+@font-face {
+    font-family: 'FetteNationalFraktur';
+    src:url('webfonts_FetteNationalFraktur/FetteNationalFraktur.ttf.woff') format('woff'),
+        url('webfonts_FetteNationalFraktur/FetteNationalFraktur.ttf.svg#FetteNationalFraktur') format('svg'),
+        url('webfonts_FetteNationalFraktur/FetteNationalFraktur.ttf.eot'),
+        url('webfonts_FetteNationalFraktur/FetteNationalFraktur.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
 }
 
 html, body {
@@ -56,12 +24,11 @@ html, body {
     height: 100%;
 }
 
-section {
-    margin: 0;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background-color: var(--scrub);
+body {
+    background-color: black;
+    color: white;
+    font-family: "FetteNationalFraktur";
+    font-size: 1.8rem;
 }
 
 .content {
@@ -71,11 +38,72 @@ section {
     overflow: hidden;
 }
 
-.parallax {
-    position: absolute;
+td {
+    font-family: "Times New Roman";
+}
+
+.container,
+.text-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    place-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.text-container {
+    white-space: pre;
+}
+
+.cool-site-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    place-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.main-grid {
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    z-index: 10;
+    position: absolute;
+    overflow: auto;
+
+    display: grid;
+    grid-template-areas:
+        "top top top"
+        "sidebar main sidebar-2"
+        "bottom bottom bottom";
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 5fr 1fr;
+    gap: 5px;
+    padding: 5px;
+}
+
+.main-grid .top {
+    grid-area: top;
+}
+
+.main-grid .sidebar {
+    grid-area: sidebar;
+}
+
+.main-grid .main {
+    grid-area: main;
+}
+
+.main-grid .sidebar-2 {
+    grid-area: sidebar-2;
+}
+
+.main-grid .bottom {
+    grid-area: bottom;
+}
+
+.parallax {
+    width: 100%;
+    height: 100%;
     background: url("moon_bg.png");
     background-size: cover;
     background-position: center; 
