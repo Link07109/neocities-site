@@ -5,11 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>valsei</title>
 
-        <script src="https://kit.fontawesome.com/140561a5ff.js" crossorigin="anonymous"></script>
-
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href='https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css2?family=Jersey+10&display=swap' rel='stylesheet'>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0" />
 
         <link href="/style.css" rel="stylesheet" type="text/css" media="all">
     </head>
@@ -24,26 +23,32 @@
 
                 <div class="main-grid">
                     <div class="top">
-                        <div class="container">
-                            <h1>miau !</h1>
-                            <i class="fa-brands fa-github"></i>
-                            <i class="fa-brands fa-itch-io"></i>
+                        <div class="top-container">
+                            <h1>valsei</h1>
+                            <span class="material-symbols-rounded">flowchart</span>
+                            <span class="material-symbols-rounded">stadia_controller</span>
+                            <span class="material-symbols-rounded">public</span>
                         </div>
                     </div> <!-- top end -->
 
                     <div class="sidebar">
-                        <div class="container">
                             <a href="page2.html">go to page 2</a>
-                        </div>
                     </div> <!-- side bar end -->
 
                     <div class="main">
-                        <div class="text-container">
-                            <table>
-                                <tr><td><code>─── ⋆⋅☆⋅⋆ ───           − ❐ ×</code></td></tr>
-                                <tr><td>⟡        <i><b>Do you ever feel a strange</b></i>        ⟡</td></tr>
-                                <tr><td>⟡             <i><b>sadness as dusk falls</b></i>            ⟡</td></tr>
-                            </table>
+                        <div class="discord-bio-container">
+                                <code class="top-left">─── </code>
+                                <p class="left1">⟡</p>
+                                <p class="left2">⟡</p>
+
+                                <code class="center-left">⋆⋅☆⋅⋆ ───</code>
+                                <code class="center-right">−</code>
+                                <p class="center1">Do you ever feel a strange</p>
+                                <p class="center2">sadness as dusk falls</p>
+
+                                <code class="top-right"> ❐ ×</code>
+                                <p class="right1">⟡</p>
+                                <p class="right2">⟡</p>
                         </div>
 
                         <br/>
@@ -53,12 +58,25 @@
                             <img src="https://files.catbox.moe/87wkst.png">
                             <img src="https://files.catbox.moe/zsvknn.png">
                         </div>
+
+                        <br/>
+                        <!--
+                        <div class="container">
+                            Hi there! Welcome to my website! I'm a recent computer science graduate who is still unemployed.
+                            I figured I'd make this website as a way to showcase my skills while developing new ones!
+                            There's not much here at the moment but I hope you enjoy your stay anyways!
+                        </div>
+                        -->
                     </div> <!-- main end -->
 
                     <div class="sidebar-2">
-                        <div class="container">
-                            sidebar 2 !
-                        </div>
+                        music player
+                        <br/>
+                        <div id="player"></div>
+                        <br/>
+                        <button class="audio_button" id="audio-prev"><span class="material-symbols-rounded">skip_previous</span></button>
+                        <button class="audio_button" id="audio-play"><span id="audio_button_id" class="material-symbols-rounded">play_arrow</span></button>
+                        <button class="audio_button" id="audio-skip"><span class="material-symbols-rounded">skip_next</span></button>
                     </div> <!-- sidebar 2 end -->
 
                     <div class="bottom">
@@ -76,6 +94,7 @@
             </div>
         </div>
 
+        <script src="https://www.youtube.com/iframe_api"></script>
         <script src="script.js"></script>
     </body>
 </html>

@@ -27,7 +27,8 @@ html, body {
 body {
     background-color: black;
     color: white;
-    font-family: "FetteNationalFraktur";
+    font-family: "Jersey 10", serif;
+    font-weight: 400;
     font-size: 1.8rem;
 }
 
@@ -38,7 +39,7 @@ body {
     overflow: hidden;
 }
 
-td {
+.tnr {
     font-family: "Times New Roman";
 }
 
@@ -55,12 +56,103 @@ td {
     white-space: pre;
 }
 
+.top-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    place-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
 .cool-site-container {
     display: grid;
     grid-template-columns: auto auto auto;
     place-items: center;
     justify-content: center;
     gap: 5px;
+}
+
+.pre-text {
+    white-space: pre;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.single-center {
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    place-items: center;
+}
+
+.vertical-stack {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 5px;
+}
+
+.discord-bio-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto;
+    align-items: center;
+    grid-template-areas:
+        "top-left center-left center-right top-right"
+        "left1 center1 center1 right1"
+        "left2 center2 center2 right2";
+}
+
+.discord-bio-container .top-left {
+    grid-area: top-left;
+    white-space: pre;
+}
+.discord-bio-container .center-left {
+    grid-area: center-left;
+}
+.discord-bio-container .center-right {
+    grid-area: center-right;
+    justify-self: end;
+}
+.discord-bio-container .top-right {
+    grid-area: top-right;
+    white-space: pre;
+}
+
+.left1, .left2, .right1, .right2 {
+    margin: 0;
+}
+
+.discord-bio-container .left1 {
+    grid-area: left1;
+}
+.discord-bio-container .left2 {
+    grid-area: left2;
+}
+
+.center1, .center2 {
+    font-family: "Times New Roman";
+    font-style: italic;
+    font-weight: bold;
+    margin: 0;
+}
+.discord-bio-container .center1 {
+    grid-area: center1;
+}
+.discord-bio-container .center2 {
+    grid-area: center2;
+    justify-self: center;
+}
+
+.right1, .right2 {
+    justify-self: end;
+}
+.discord-bio-container .right1 {
+    grid-area: right1;
+}
+.discord-bio-container .right2 {
+    grid-area: right2;
 }
 
 .main-grid {
@@ -83,22 +175,42 @@ td {
 
 .main-grid .top {
     grid-area: top;
+    justify-self: center;
+    align-self: end;
+    place-items: center;
 }
 
 .main-grid .sidebar {
     grid-area: sidebar;
+    justify-self: end;
 }
 
 .main-grid .main {
     grid-area: main;
+    justify-self: center;
 }
 
 .main-grid .sidebar-2 {
     grid-area: sidebar-2;
+    justify-self: start;
 }
 
 .main-grid .bottom {
     grid-area: bottom;
+}
+
+.audio_button {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    font-size: 2rem;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.audio_button:hover {
+    background-color: blue;
+    border: 2px solid gray;
 }
 
 .parallax {
