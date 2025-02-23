@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>valsei</title>
 
+        <script src="https://iframe.chat/scripts/main.min.js"></script>
+
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href='https://fonts.googleapis.com/css2?family=Jersey+10&display=swap' rel='stylesheet'>
@@ -24,10 +26,12 @@
                 <div class="main-grid">
                     <div class="top">
                         <div class="top-container">
-                            <h1>valsei</h1>
+                            <h1>miau !</h1>
+                            <!--
                             <span class="material-symbols-rounded">flowchart</span>
                             <span class="material-symbols-rounded">stadia_controller</span>
                             <span class="material-symbols-rounded">public</span>
+                            -->
                         </div>
                     </div> <!-- top end -->
 
@@ -60,23 +64,89 @@
                         </div>
 
                         <br/>
+                        <div class="single-center">
+                            <img src="mewo.png">
                         <!--
-                        <div class="container">
+                            favs:
+                            anime: bocchi the rock, promised neverland s1
+                            games: zelda, zenonia, dark souls, hollow knight, momodora, cave story, undertale, r6s, league, ssbm
+                            <ul>
+                                <li>
+                                    pierce the veil
+                                </li>
+                                <li>
+                                    my chemical romance
+                                </li>
+                                <li>
+                                    fall out boy
+                                </li>
+                                <li>
+                                    three days grace
+                                </li>
+                                <li>
+                                    set it off
+                                </li>
+                                <li>
+                                    sleeping with sirens
+                                </li>
+                                <li>
+                                    yap
+                                </li>
+                                <li>
+                                    steins;gate
+                                </li>
+                                <li>
+                                    your lie in april
+                                </li>
+                                <li>
+                                    attack on titan
+                                </li>
+                                <li>
+                                    yap
+                                </li>
+                                <li>
+                                    yap
+                                </li>
+                                <li>
+                                    yap
+                                </li>
+                                <li>
+                                    yap
+                                </li>
+                                <li>
+                                    yap
+                                </li>
+                                <li>
+                                    yap
+                                </li>
+                            </ul>
+                        -->
+                        <!--
                             Hi there! Welcome to my website! I'm a recent computer science graduate who is still unemployed.
                             I figured I'd make this website as a way to showcase my skills while developing new ones!
                             There's not much here at the moment but I hope you enjoy your stay anyways!
-                        </div>
                         -->
+                        </div>
                     </div> <!-- main end -->
 
                     <div class="sidebar-2">
-                        music player
-                        <br/>
                         <div id="player"></div>
+                        <br/>
+                        now playing:
+                        <br/>
+                        <p id="song_name"></p>
                         <br/>
                         <button class="audio_button" id="audio-prev"><span class="material-symbols-rounded">skip_previous</span></button>
                         <button class="audio_button" id="audio-play"><span id="audio_button_id" class="material-symbols-rounded">play_arrow</span></button>
                         <button class="audio_button" id="audio-skip"><span class="material-symbols-rounded">skip_next</span></button>
+                        <br/>
+                        <br/>
+                        <iframe src='https://iframe.chat/embed?chat=valsei_chat' id='chattable' frameborder='none'></iframe>
+                        <script>
+                            chattable.initialize({
+                                stylesheet : "chattable.css"
+                            });
+                        </script>
                     </div> <!-- sidebar 2 end -->
 
                     <div class="bottom">

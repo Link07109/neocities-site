@@ -160,7 +160,7 @@ body {
     height: 100%;
     z-index: 10;
     position: absolute;
-    overflow: auto;
+    /*overflow: auto;*/
 
     display: grid;
     grid-template-areas:
@@ -188,6 +188,7 @@ body {
 .main-grid .main {
     grid-area: main;
     justify-self: center;
+    overflow: auto;
 }
 
 .main-grid .sidebar-2 {
@@ -279,21 +280,25 @@ body {
     }
 }
 
-.img-url{
+.img-url {
     text-decoration: none;
 }
 
-.url{
+.url {
     opacity: 0.5;
     text-decoration: none;
 }
 
-.url-highlighted{
+.url-highlighted {
     opacity: 1;
     text-decoration: none;
 }
 
-.url-normal{
+.url-normal {
     opacity: 0.5;
     text-decoration: none;
+}
+
+#chattable {
+    height: 300px;
 }

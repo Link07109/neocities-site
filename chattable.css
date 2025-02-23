@@ -1,0 +1,12 @@
+body {
+    background-color: black;
+}
+
+#top_banner {
+    background: blue;
+}
+
+#textInput,
+#settings {
+    color: white;
+}
